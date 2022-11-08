@@ -14,3 +14,27 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.App {
+  display: grid;
+  grid-template-columns: auto 200px;
+}
+
+header {
+  grid-column: 1/-1;
+}
+
+.ProductList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  .Product {
+  }
+}
+
+.Basket {
+}
