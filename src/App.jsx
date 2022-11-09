@@ -31,15 +31,16 @@ function App() {
     // find and modify a product
     setCart((oldCart) => {
       const subtracted = oldCart.map((item) => {
+        // substracted is equal to mapping of the cart, for each item
         if (item.id === id) {
-          return { ...item, amount: item.amount - 1 }; // returns the same item but amount 1 lower
+          //if an item matches the id that was clicked on:
+          return { ...item, amount: item.amount - 1 }; // return the same item but amount 1 lower
         }
-        return item;
+        return item; // else just return item
       });
-      const filtered = subtracted.filter((item) => item.amount > 0);
-      return filtered;
+      const filtered = subtracted.filter((item) => item.amount > 0); //filter through the items that have amount higher than 0
+      return filtered; // return those items. (essentially build the whole cart but with the condition above)
     });
-    // filter
   }
 
   useEffect(() => {
